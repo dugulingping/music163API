@@ -1,20 +1,29 @@
-#music163 API
+# music163 API
 ***
-####高品质，快速度，简单易用的网易云音乐API
+#### 高品质，快速度，简单易用的网易云音乐API
 
-[![versions](https://img.shields.io/badge/API-1.0-blue.svg)](https://www.icyuyan.net)
+[![versions](https://img.shields.io/badge/API-1.0.1-blue.svg)](https://www.icyuyan.net)
 [![platform](https://img.shields.io/badge/php-5.6-green.svg)]()
 [![platform](https://img.shields.io/badge/php-7.0-green.svg)]()
 
-##**功能：**
+## **功能(**具体使用请参照本项目wiki**)：**
 
 * 搜索
 * 歌曲详情
 * 获取某些歌曲下载链接
-
+* 歌手
+* 专辑
 ***
 
-##**参考**
+## 更新日志
+
+2017年5月27日 v1.0.1
+* 新增http代理 国外的空间或服务器可以使用 
+* 新增新的搜索api
+* 新增歌手 api
+* 新增专辑 api
+
+## **参考**
 
 * [网易云音乐常用API浅析](http://moonlib.com/606.html)
 
