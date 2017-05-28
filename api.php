@@ -48,12 +48,13 @@ class API {
 		curl_setopt($curl, CURLOPT_HTTPHEADER, $this->oldheaders);
 		curl_setopt($curl, CURLOPT_REFERER, $this->refer);
 		//代理设置 国外空间 或服务器请开启
+		/*
 		curl_setopt($curl, CURLOPT_PROXYAUTH, CURLAUTH_BASIC); // 代理认证模式
         curl_setopt($curl, CURLOPT_PROXY, '121.204.165.122'); // 代理服务器地址
 		curl_setopt($curl, CURLOPT_PROXYPORT, 8118); // 代理服务器端口
 		//curl_setopt($curl, CURLOPT_PROXYUSERPWD,""); // http代理认证帐号，username:password的格式
         curl_setopt($curl, CURLOPT_PROXYTYPE, CURLPROXY_HTTP); // 使用http代理模式
-		
+		*/
 		$result = curl_exec($curl);
         curl_close($curl);
         return $result;
@@ -86,32 +87,32 @@ class API {
 		$url = "http://music.163.com/api/artist/albums/".$artistalbums_id."/?limit=".$limit;
 		return $this->oldcurl($url);
     }
-	//歌单信息
+	//歌单信息 o
 	//我的闽南语歌单721782642
 	public function playlist($playlist_id){
 		$url = "http://music.163.com/api/playlist/detail?id=".$playlist_id;
 		return $this->oldcurl($url);
     }
-	//歌单信息
+	//歌词信息 o
 	//喜欢你==！
 	//id=93920
 	public function lyricinfo($music_id,$lv,$kv){
 		$url = "http://music.163.com/api/song/lyric?os=pc&id=".$music_id."&lv=".$lv."&kv=".$kv;
 		return $this->oldcurl($url);
     }
-	//mv链接
+	//mv链接 o
 	//诛仙恋==！
 	//id=5324450
 	public function mvinfo($music_id,$mvtype){
 		$url = "http://music.163.com/api/mv/detail?id=".$music_id."&type=".$mvtype;
 		return $this->oldcurl($url);
     }
-	//歌手top50
+	//歌手top50 o
 	public function artisttop50($artist_id){
 		$url = "http://music.163.com/api/artist/".$artist_id."?ext=true&top=50&id=".$artist_id;
 		return $this->oldcurl($url);
     }
-	//download
+	//download o
 	public function downloadurl($music_id,$br){
 		$url = "http://music.163.com/api/song/enhance/download/url?br=".$br."&id=".$music_id;
 		return $this->oldcurl($url);
