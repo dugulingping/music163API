@@ -103,7 +103,7 @@ if ($_GET["type"] != NULL)
 	{
 		$id = $_GET["id"];
 		 if ($id == NULL){
-			echo "参数错误9";
+			echo "参数错误11";
 			exit();
 		}
 		$result = $api->artisttop50($id);
@@ -116,7 +116,7 @@ if ($_GET["type"] != NULL)
 		$id = $_GET["id"];
 		$br = $_GET["br"];
 		if ($id == NULL || $br == NULL ){
-			echo "参数错误5";
+			echo "参数错误12";
 			exit();
 		}
 		$result = $api->downloadurl($id,$br);
@@ -128,12 +128,45 @@ if ($_GET["type"] != NULL)
 		$id = $_GET["id"];
 		$mvtype = $_GET["mvtype"];
 		if ($id == NULL || $mvtype == NULL ){
-			echo "参数错误5";
+			echo "参数错误13";
 			exit();
 		}
 		$result = $api->mvinfo($id,$mvtype);
 		echo $result;
 	}
+	//排行榜info
+	else if ($_GET["type"] == "top") 
+	{
+		$id = $_GET["id"];
+		 if ($id == NULL){
+			echo "参数错误14";
+			exit();
+		}
+		$result = $api->playlist($id);
+		echo $result;
+	}
+	/*
+	id: 71385702	//云音乐ACE音乐榜	
+	id: 19723756     // 云音乐飙升榜 o
+	id: 2884035     // 网易原创歌曲榜 o
+	id: 10520166	//云音乐电音榜
+	id：71384707	//云音乐古典音乐榜
+	id: 3778678     // 云音乐热歌榜 o
+	id: 3779629     // 云音乐新歌榜 o
+	id：71384707	//Beatport全球电子舞曲榜
+	id：60131	//日本Oricon周榜
+	id: 180106	//UK排行榜周榜
+	id:	60198	//美国Billboard周榜
+	id:	271135204	//法国 NRJ Vos Hits 周榜
+	id:	11641012	//iTunes榜
+	id：120001	//Hit FM Top榜
+	id：21845217	//KTV唛榜
+	id：1899724	//中国嘻哈榜
+	id: 4395559     // 华语金曲榜
+	id: 64016     // 中国TOP排行榜（内地榜）
+	id: 112504     // 中国TOP排行榜（港台榜）
+	*/
+
 	else
 		{
 		echo "参数错误2";
