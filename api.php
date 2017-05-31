@@ -119,7 +119,7 @@ return $result;
     }
 	//使用国内直接代理的api  不可滥用==！ o
 	public function downloadurl($music_id,$br){
-		$url = "http://42.51.8.139:1111/music163?type=musicurl&br=".$br."&id=".$music_id;
+		$url = "http://42.51.8.139:1111/music163/?type=musicurl&br=".$br."&id=".$music_id;
 		return $this->oldcurl($url);
     }
 
