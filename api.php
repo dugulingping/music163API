@@ -125,7 +125,14 @@ class API {
 		$url = "http://42.51.8.139:1111/music163/?type=musicurl&br=".$br."&id=".$music_id;
 		return $curl->curl($url);
     }
+	//用户歌单 o
+	public function uplaylist($u_id,$limit){
+		$url = "http://music.163.com/api/user/playlist/?uid=".$u_id."&limit=".$limit."&offset=1";
+		return $this->oldcurl($url);
+    }
 
+	
+	//http://music.163.com/api/user/playlist/?offset=1&limit=1&uid=137630579
 
 }
 class CCURL {

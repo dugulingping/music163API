@@ -166,6 +166,19 @@ if ($_GET["type"] != NULL)
 	id: 64016     // 中国TOP排行榜（内地榜）
 	id: 112504     // 中国TOP排行榜（港台榜）
 	*/
+	//用户歌单
+	else if ($_GET["type"] == "uplaylist") 
+	{
+		$uid = $_GET["uid"];
+		$limit = $_GET["limit"];
+		if ($uid == NULL || $limit == NULL)
+		{
+			echo "参数错误15";
+			exit();
+		}
+		$result = $api->uplaylist($uid,$limit);
+		echo $result;
+	}	
 
 	else
 		{

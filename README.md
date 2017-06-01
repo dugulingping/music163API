@@ -2,7 +2,7 @@
 ***
 #### 高品质，快速度，简单易用的网易云音乐API
 
-[![versions](https://img.shields.io/badge/API-1.0.6-blue.svg)](https://www.icyuyan.net)
+[![versions](https://img.shields.io/badge/music163API-1.0.7-blue.svg)](https://www.icyuyan.net)
 [![platform](https://img.shields.io/badge/php-5.6-green.svg)]()
 [![platform](https://img.shields.io/badge/php-7.0-green.svg)]()
 
@@ -21,6 +21,8 @@
 ***
 
 ## 更新日志
+2017年6月2日 v1.0.7
+* 增加获取用户歌单的api
 
 2017年6月1日 v1.0.6
 * 彻底解决歌曲链接返回400错误的bug
